@@ -1,0 +1,41 @@
+{
+	"models":[{
+		"positionLon":114.06329773012003,
+		"positionLat":22.540012510276405,
+		"name":"深圳彩天名苑ShenzhenCaitianmingyuanGarden(China)",
+		"uri":"./3Dmodels/深圳彩天名苑ShenzhenCaitianmingyuanGarden(China).gltf"
+	}
+	,{
+		"positionLon":114.06629965793238,
+		"positionLat":22.529005164533118,
+		"name":"深圳出入境检验检疫局ShenzhenEntry-ExitInspectionandQuarantineBureauofPRC",
+		"uri":"./3Dmodels/深圳出入境检验检疫局ShenzhenEntry-ExitInspectionandQuarantineBureauofPRC.gltf"
+	}
+	,{
+		"positionLon":114.0642989389213,
+		"positionLat":22.53236414402537,
+		"name":"深圳联合广场ShenzhenUnitedPlaza",
+		"uri":"./3Dmodels/深圳联合广场ShenzhenUnitedPlaza.gltf"
+	}
+	,{
+		"positionLon":114.06488117177828,
+		"positionLat":22.556237074906935,
+		"name":"水塔",
+		"uri":"./3Dmodels/水塔.gltf"
+	}
+	,{
+		"positionLon":114.12369728611097,
+		"positionLat":22.54651837222986,
+		"name":"CuigunCommunity(翠湖小区)",
+		"uri":"./3Dmodels/CuigunCommunity(翠湖小区).gltf"
+	}
+	,{
+		"positionLon":114.07117387480142,
+		"positionLat":22.543966064936527,
+		"name":"GrandSkylightGardenHotel",
+		"uri":"./3Dmodels/GrandSkylightGardenHotel.gltf"
+	}
+	
+	
+	]
+}

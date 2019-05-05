@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>深圳地区3D建筑模型</title>
+<script src="./Cesium/Cesium.js"></script>
+<script src="./js/jquery.min.js"></script>
+
+<style>
+@import url("./Cesium/Widgets/widgets.css");
+html, body {
+	width: 100%;
+	height: 100%;
+	margin: 0;
+	padding: 0;
+	overflow: hidden;
+}
+#cesiumContainer {
+	height: 95%;
+}
+h1 {
+	heigth: 5%;
+}
+</style>
+</head>
+<body>
+	<div id="cesiumContainer"></div>
+	<script>
+	Cesium.Ion.defaultAccessToken = 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJqdGkiOiIyMGEzZWNmOC1iZWQzLTQ3MzgtYWVkMy1hMDM0Mjg3ZjBlNjciLCJpZCI6ODAzMCwic2NvcGVzIjpbImFzciIsImdjIl0sImlhdCI6MTU1MTA4MjM4NX0.kC9-0Lf9r4B7sTzkark7gphd-UTrmSuNZjDgkfeWan4';
+	var viewer = new Cesium.Viewer("cesiumContainer");
+     $.ajax({
+  		url:"./dataJson/models.json",
+  		dataType:"json",
+  		success:function(res){
+  			var models = res.models
+  			for(var i=0; i<models.length;i++){
+  				viewer.entities.add({
+  					position:Cesium.Cartesian3.fromDegrees(models[i].positionLon,models[i].positionLat),
+  					name:models[i].name,
+  					model:{
+  						uri:models[i].uri
+  					}
+  				})
+  			}
+  			
+  		}
+  	})   
+    
+    //相机定位（视角会自动定位到这个位置，动画切换视角，不会对模型进行相机锁定）
+   viewer.camera.flyTo({
+		//给定一个相机视角的位置
+		destination: Cesium.Cartesian3.fromDegrees(114.05444092992921,22.54582408990844,1500)
+	})
+	</script>
+
+
+</body>
+</html>
